@@ -1,0 +1,19 @@
+/*********************body styles  ******************/
+
+/* make the bg light purple  */
+body {
+  background-color: #E2D6D7;
+  margin: 0;
+}
+
+/********************* header and footer styles *********************/
+
+header, footer {
+  background-image: linear-gradient(rgba(42,15,45,0.7), rgba(42,15,45,0.8));
+  height: 400px;
+}
+
+.img-1 {
+  height: 600px;
+
+}
