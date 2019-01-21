@@ -9,11 +9,69 @@ body {
 /********************* header and footer styles *********************/
 
 header, footer {
-  background-image: linear-gradient(rgba(42,15,45,0.7), rgba(42,15,45,0.8));
-  height: 400px;
+  background-image: linear-gradient(rgba(42,15,45,0.6), rgba(42,15,45,0.8));
+  height: 100px;
+}
+
+/********************* body styles *********************/
+
+.content-wrap {
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+  max-width: 930px;
+  background-color: grey;
+}
+
+/* images */
+
+.img-wrap {
+  min-height: 630px;
+}
+
+.img-wrap > div, .img-wrap > img {
+  display: inline-block;
+  max-width: 450px;
+  background-size: cover;
+  margin: 5px;
+}
+
+.img-wrap > div {
+  width: 450px;
+  height: 300px;
 }
 
 .img-1 {
-  height: 600px;
+  background: linear-gradient(rgba(42,15,45,0.5), rgba(42,15,45,0.8)), url("../images/tree.jpg") no-repeat;
+}
 
+.img-2 {
+  background: linear-gradient(rgba(42,15,45,0.5), rgba(42,15,45,0.8)), url("../images/city.jpg") no-repeat;
+}
+
+.img-wrap > img {
+  background: #ccc;
+}
+
+/* button bar */
+
+.buttons {
+  position: relative;
+  height: 100px;
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-image: radial-gradient(#be0c5e, black);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20%;
 }
