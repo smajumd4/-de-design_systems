@@ -1,5 +1,8 @@
-/*********************body styles  ******************/
+/* global styles */
 
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+
+/*********************body styles  ******************/
 /* make the bg light purple  */
 body {
   background-color: #E2D6D7;
@@ -11,6 +14,20 @@ body {
 header, footer {
   background-image: linear-gradient(rgba(42,15,45,0.6), rgba(42,15,45,0.8));
   height: 100px;
+  position: relative;
+  text-align: center;
+}
+
+header > p {
+  display: inline-block;
+  /* position: absolute; */
+  margin: auto auto auto auto;
+  top: 25%;
+  vertical-align: middle;
+  line-height: 100px;
+  color: white;
+  font-size: 200%;
+  font-family: 'Bungee Inline', cursive;
 }
 
 /********************* body styles *********************/
