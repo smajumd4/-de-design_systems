@@ -26,6 +26,7 @@ window.onload = function() {
         body[0].style.cursor = "zoom-out";
       }
       n = 1;
+      console.log("m is: ", m)
     }
     else {
       if (m===ind) {
@@ -45,8 +46,23 @@ window.onload = function() {
     }
   }
 
+  // move the shape
+  var x = 0;
+  $(".shape").click(function(){
+    console.log(x);
+    if (m===0) {
+      $(".shape").css({"transform": `translateX(${2+x}vh)`});
+      x = x + 6;
+    }
+    if (m===1) {
+      $(".shape").css({"transform": `translateX(-${2+x}vh)`});
+      x = x + 4;
+    }
+  });
+
 
   // event listener for zoom in and out
   button[0].addEventListener("click", function zoomIn() {zoom(0);});
   button[1].addEventListener("click", function zoomOut() {zoom(1);});
+
 }

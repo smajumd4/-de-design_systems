@@ -5,8 +5,8 @@
 /*********************body styles  ******************/
 /* make the bg light purple  */
 body {
-  /* background-color: #EFD5E3; */
-  background-color: #0A0000;
+  background-color: #EFD5E3;
+  /* background-color: #0A0000; */
   margin: 0;
 }
 
@@ -167,7 +167,29 @@ p {
   transform: rotate(-15deg);
 }
 
-
 .arw:last-child > .fas {
   transform: rotate(15deg);
+}
+
+/* grid-ball styles */
+.ball-grid {
+  width: 80vw;
+  margin: 0 auto;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.grid-block {
+  background-color: blue;
+  z-index: 10;
+}
+
+.shape {
+  height: 5vh;
+  width: 5vh;
+  margin: 2.4vh 1vh 0vh 1vh;
+  background-color: red;
+  border-radius: 50%;
+  z-index: -1;
 }
