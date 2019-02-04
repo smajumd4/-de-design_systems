@@ -5,7 +5,8 @@
 /*********************body styles  ******************/
 /* make the bg light purple  */
 body {
-  /* background-color: #E2D6D7; */
+  /* background-color: #EFD5E3; */
+  background-color: #0A0000;
   margin: 0;
 }
 
@@ -68,59 +69,64 @@ p {
 /********************* body styles *********************/
 
 .content-wrap {
+  padding: 15vh 0;
   margin: 0 auto;
-  padding: 15vh 10vw;
   overflow: hidden;
-  max-width: 930px;
-  /* background-color: grey; */
+  width: 100vw;
 }
 
 /* images */
-
-.img-wrap {
+.img-color-wrap {
+  background-color: #211228;
+  padding-left: 2vw;
+  padding: 1vh 0;
+  margin: 5vh 0;
   min-height: 630px;
 }
-
-.img-wrap > div, .img-wrap > img {
-  display: inline-block;
-  max-width: 450px;
-  background-size: cover;
-  margin: 5px;
-}
-
-.img-wrap > div {
-  width: 450px;
-  height: 300px;
-}
-
-.img-1 {
-  background: linear-gradient(rgba(42,15,45,0.5), rgba(42,15,45,0.8)), url("../images/tree.jpg") no-repeat;
-}
-
-.img-2 {
-  background: linear-gradient(rgba(42,15,45,0.5), rgba(42,15,45,0.8)), url("../images/city.jpg") no-repeat;
+.img-wrap {
+  width: 75vw;
+  margin: auto;
+  margin-top: 1vh;
 }
 
 .img-wrap > img {
-  background: #ccc;
+  display: inline-block;
+  width: 48vw;
+  height: 32vw;
+  margin: auto;
+}
+
+.img-wrap > div {
+  display: inline-block;
+  width: 24vw;
+  height: 16vw;
+  font-size: 3vw;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2vh;
+  color: #FFBBAA;
 }
 
 /* button bar */
 
-.buttons {
+.button-wrap {
   position: relative;
   height: 20vh;
-  width: 100%;
   margin: auto;
 }
+.buttons {
+  width: 52vw;
+  padding-left: 1vw;
+  top: 20%;
+  margin: 0 auto;
+}
 
-.btn {
-  background-image: radial-gradient(#be0c5e, black);
-  width: 45%;
+.elem {
+  background-image: radial-gradient(#CC2800, #38160E);
+  width: 18vw;
   height: 15vh;
   border: none;
-  color: white;
-  /* padding: 15px 28px; */
+  color: #FFBBAA;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -132,4 +138,36 @@ p {
 .fas {
   font-size: 3vh;
   line-height: 15vh;
+}
+
+.elem:first-child {
+  margin-right: 8vw;
+}
+
+/* arrow styles */
+.arrow-wrap {
+  position: relative;
+  height: 12vh;
+  margin: auto;
+}
+
+.arw {
+  background-image: none;
+}
+
+.arw > .fas {
+  cursor: default;
+  line-height: 12vh;
+  font-size: 6vh;
+  color: #160505;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.arw:first-child > .fas {
+  transform: rotate(-15deg);
+}
+
+
+.arw:last-child > .fas {
+  transform: rotate(15deg);
 }

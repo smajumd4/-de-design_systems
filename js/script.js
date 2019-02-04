@@ -15,7 +15,8 @@ window.onload = function() {
   var m = 2;
   function zoom(ind) {
     if (n===0) {
-      button[ind].style.border = "2px white solid";
+      button[ind].style.boxShadow = " 0 .4vw .8vw 0 red";
+      button[ind].style.width = "19vw";
       if (ind===0) {
         m = 0; //indicator for zoomIn
         body[0].style.cursor = "zoom-in";
@@ -29,13 +30,14 @@ window.onload = function() {
     else {
       if (m===ind) {
         button[ind].style.border = "none";
+        button[ind].style.width = "18vw";
+        button[ind].style.boxShadow = "none";
         body[0].style.cursor = "default";
         n=0;
         m=2;
       }
       else {
-        button[0].style.border = "none";
-        button[1].style.border = "none";
+        $(".btn").css({"border":"none", "width": "18vw", "height":"12vw", "box-shadow": "none"});
         n = 0;
         m = ind;
         zoom(ind);
