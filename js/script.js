@@ -48,17 +48,44 @@ window.onload = function() {
 
   // move the shape
   var x = 0;
-  $(".shape").click(function(){
-    console.log(x);
+  $(".grid-block").click(function(){
     if (m===0) {
-      $(".shape").css({"transform": `translateX(${2+x}vh)`});
       x = x + 6;
+      $(".shape").css({"transform": `translateX(${x}vh)`});
+      if (x>= 70) {
+        $(".shape").css({"transform": `translateX(-4vh)`});
+        x = 0;
+      }
     }
     if (m===1) {
-      $(".shape").css({"transform": `translateX(-${2+x}vh)`});
-      x = x + 4;
+      x = x - 6;
+      $(".shape").css({"transform": `translateX(${x}vh)`});
+      if (x<=-4) {
+        x = x + 72;
+        $(".shape").css({"transform": `translateX(${x}vh)`});
+      }
     }
   });
+
+  // hover over the block
+
+  $(".grid-block").hover(
+    function(){
+      $(".shape").css({"background-color": "#D62A00", "box-shadow": "0.1vw .4vw .8vw 0.2vw #FF7654"});
+    }, function(){
+      $(".shape").css({"background-color": "#D62A00", "box-shadow": "none"});
+    }
+  );
+
+  // hover over the image
+  $(".img").hover(
+    function(){
+      $(this).css({"background-color": "#D62A00", "box-shadow": "0.1vw .4vw .8vw 0.2vw #331D3F, 0.2vw .6vw .7vw 0.3vw #8E5572"});
+    }, function(){
+      $(this).css({"background-color": "#D62A00", "box-shadow": "none"});
+    }
+  );
+
 
 
   // event listener for zoom in and out
