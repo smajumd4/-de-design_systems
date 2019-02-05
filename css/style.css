@@ -1,22 +1,21 @@
 /* global styles */
 
-@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Bungee|Bungee+Inline|Handlee');
+
+/* font-family: 'Bungee', cursive;
+font-family: 'Handlee', cursive;
+font-family: 'Bungee Inline', cursive; */
 
 /*********************body styles  ******************/
 /* make the bg light purple  */
 body {
-  background-color: #EFD5E3;
+  background-color: #CCC8CE;
   /* background-color: #0A0000; */
   margin: 0;
 }
 
-/********************* header and footer styles *********************/
+/********************* header styles *********************/
 
-footer {
-  background-image: linear-gradient(rgba(42,15,45,0.6), rgba(42,15,45,0.8));
-  height: 15vh;
-  position: relative;
-}
 header {
   height: 15vh;
 }
@@ -81,8 +80,10 @@ p {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 75vw;
+  padding: 15vh 0;
+  width: 100vw;
   height: 44vw;
+  background-color: #283B44;
 }
 
 .meme {
@@ -92,11 +93,12 @@ p {
 
 /* images */
 .img-color-wrap {
-  background-color: #211228;
+  background-color: #473742;
   padding-left: 2vw;
   padding: 1vh 0;
   margin: 5vh 0;
   min-height: 630px;
+  padding-top: 15vh;
 }
 .img-wrap {
   width: 75vw;
@@ -120,15 +122,23 @@ p {
   text-align: center;
   margin-bottom: 2vh;
   color: #FFBBAA;
+  background-color: #CE6F6F;
 }
 
+.nt > p {
+  font-size: 4vh;
+  font-family: 'Handlee', cursive;
+  margin-top: 0;
+}
 
 /* button bar */
 
 .button-wrap {
   position: relative;
   height: 20vh;
-  margin: auto;
+  margin: auto auto 15vh auto;
+  background-color: #283B44;
+  padding-bottom: 15vh;
 }
 .buttons {
   width: 52vw;
@@ -151,8 +161,12 @@ p {
   border-radius: 20%;
 }
 
+.btn:hover {
+  box-shadow: 0 .4vw .8vw 0 #DB5432;
+}
+
 .fas {
-  font-size: 3vh;
+  font-size: 5vh;
   line-height: 15vh;
 }
 
@@ -165,6 +179,7 @@ p {
   position: relative;
   height: 12vh;
   margin: auto;
+  background-color: #283B44;
 }
 
 .arw {
@@ -174,9 +189,9 @@ p {
 .arw > .fas {
   cursor: default;
   line-height: 12vh;
-  font-size: 6vh;
+  font-size: 8vh;
   color: #160505;
-  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  text-shadow: 0 0 3px #8B9CA5, 0 0 5px #ccc;
 }
 
 .arw:first-child > .fas {
@@ -187,18 +202,42 @@ p {
   transform: rotate(15deg);
 }
 
+/* alert styles */
+.alert-wrap {
+  position: relative;
+  height: 90vh;
+  margin: auto;
+}
+
+.alert {
+  height: 90vh;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.alert > p {
+  line-height: 90vh;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  font-size: 4vw;
+  color: #CCC8CE;
+}
+
 /* grid-ball styles */
+.grid-container {
+  height: 80vh;
+}
 .ball-grid {
   width: 80vw;
-  margin: 0 auto;
-  height: 10vh;
+  margin: auto;
+  margin-top: 60vh;
+  height: 30vh;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
 }
 
 .grid-block {
   background-color: #1E3F3F;
-  z-index: 10;
 }
 
 .shape {
