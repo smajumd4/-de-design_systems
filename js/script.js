@@ -15,7 +15,7 @@ window.onload = function() {
   var m = 2;
   function zoom(ind) {
     if (n===0) {
-      button[ind].style.boxShadow = " 0 .4vw .8vw 0 red";
+      button[ind].style.boxShadow = " 0 .4vw .8vw 0 #DB5432";
       button[ind].style.width = "19vw";
       if (ind===0) {
         m = 0; //indicator for zoomIn
@@ -48,28 +48,28 @@ window.onload = function() {
   // move the shape
   var x = 0;
   $(".grid-block").click(function(){
+    console.log(x);
     if (m===0) {
-      x = x + 6;
+      x = x + 4;
       $(".shape").each(function(i) {
         var y = Math.floor(Math.random() * Math.floor(8));
         console.log(y);
-        $(this).css({"transform": `translateX(${x+y}vh)`});
+        $(this).css({"transform": `translateX(${x+y}vw)`});
       })
-      if (x>= 70) {
-        $(".shape").css({"transform": `translateX(-4vh)`});
+      if (x>= 41) {
+        $(".shape").css({"transform": `translateX(-3vw)`});
         x = 0;
       }
     }
     if (m===1) {
-      x = x - 6;
+      x = x - 4;
       $(".shape").each(function(i) {
         var y = Math.floor(Math.random() * Math.floor(8));
-        console.log(y);
-        $(this).css({"transform": `translateX(${x-y}vh)`});
+        $(this).css({"transform": `translateX(${x-y}vw)`});
       })
-      if (x<=-4) {
-        x = x + 72;
-        $(".shape").css({"transform": `translateX(${x}vh)`});
+      if (x<=-1) {
+        x = x + 50;
+        $(".shape").css({"transform": `translateX(${x}vw)`});
       }
     }
   });
@@ -116,46 +116,63 @@ window.onload = function() {
   $(window).scroll(function(){
     if (m===2) {
       if ($(window).scrollTop() >= (topofDiv)) {
-        $('.alert > p').css({'color': '#BA2500'});
+        $('.alert > p:first-child').css({'color': '#BA2500'});
+        $('.alert > p:last-child').css({'color': '#CCC8CE'});
       }
       else {
-        $('.alert > p').css({'color': '#CCC8CE'});
+        $('.alert > p:first-child').css({'color': '#CCC8CE'});
+        $('.alert > p:last-child').css({'color': '#CCC8CE'});
       }
     }
     else {
-      $('.alert > p').css({'color': '#CCC8CE'});
+      $('.alert > p:first-child').css({'color': '#CCC8CE'});
+      $('.alert > p:last-child').css({'color': '#BA2500 '});
+
     }
   });
 
   // image property change
   // img-1
   var brit = 100;
-  $(".img-1").click(function(){
+  $(".img-3").click(function(){
     if (m===0) {
       brit = brit + 20;
       $(".img-1").css({'filter': `brightness(${brit}%)`});
-      $(".notes-1 > p").text(`Brightness changed to ${brit}%`)
+      $(".notes-1 > p").text(`Brightness changed to ${brit-100}%`)
     }
     if (m===1) {
-      console.log('img-1 clicked');
-      cont = cont - 10;
+      brit = brit - 10;
       $(".img-1").css({'filter': `brightness(${brit}%)`});
-      $(".notes-1 > p").text(`Brightness changed to ${brit}%`)
+      $(".notes-1 > p").text(`Brightness changed to ${brit-100}%`)
     }
   });
   // img-2
   var cont = 100;
-  $(".img-2").click(function(){
+  $(".img-1").click(function(){
     if (m===0) {
       cont = cont + 20;
       $(".img-2").css({'filter': `contrast(${cont}%)`});
-      $(".notes-2 > p").text(`Contrast changed to ${cont}%`)
+      $(".notes-2 > p").text(`Contrast changed to ${cont-100}%`)
     }
     if (m===1) {
       console.log('img-2 clicked');
       cont = cont - 10;
       $(".img-2").css({'filter': `contrast(${cont}%)`});
-      $(".notes-2 > p").text(`Contrast changed to ${cont}%`)
+      $(".notes-2 > p").text(`Contrast changed to ${cont-100}%`)
+    }
+  });
+  // img-3
+  var blur = 10;
+  $(".img-2").click(function(){
+    if (m===0) {
+      blur = blur + 8;
+      $(".img-3").css({'filter': `blur(${blur}px)`});
+      $(".notes-3 > p").text(`Blur changed to ${blur}px`)
+    }
+    if (m===1) {
+      blur = blur - 8;
+      $(".img-3").css({'filter': `blur(${blur}px)`});
+      $(".notes-3 > p").text(`Blur changed to ${blur}px`)
     }
   });
 

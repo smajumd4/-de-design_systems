@@ -126,7 +126,7 @@ p {
 }
 
 .nt > p {
-  font-size: 4vh;
+  font-size: 2vw;
   font-family: 'Handlee', cursive;
   margin-top: 0;
 }
@@ -223,6 +223,12 @@ p {
   color: #CCC8CE;
 }
 
+.alert > p:last-child {
+  position:absolute;
+  top: 55%;
+  left: 19%;
+  line-height: 4vw;
+}
 /* grid-ball styles */
 .grid-container {
   height: 80vh;
@@ -238,6 +244,7 @@ p {
 
 .grid-block {
   background-color: #1E3F3F;
+  z-index: 10;
 }
 
 .shape {
